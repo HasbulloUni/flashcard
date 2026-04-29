@@ -1,51 +1,80 @@
 # Flashcard Generator
 
-Flashcard Generator è un'applicazione desktop professionale sviluppata in Python per facilitare l'apprendimento mnemonico attraverso mazzi di carte personalizzabili. Il software è progettato con un'architettura modulare e segue le migliori pratiche di ingegneria del software, inclusi il type hinting e un sistema di logging strutturato.
+Flashcard Generator is a script desktop application developed in Python designed to facilitate mnemonic learning through customizable card decks.
 
-## Caratteristiche Tecniche
+## Technical Specifications
+*   **User Interface**: Developed using CustomTkinter for a modern dark-mode experience.
+*   **Data Management**: Powered by SQLite with full referential integrity and parameterized queries.
+*   **Data Visualization**: Integrated performance tracking via Matplotlib bar charts.
+*   **Export Logic**: Capability to generate A4 PDF documents in a two-column layout (Front/Back) using ReportLab. 
 
-*   **Architettura**: Modulare (Separazione tra UI, Logica di Export e Database).
-*   **Interfaccia Grafica**: Sviluppata con CustomTkinter per un'esperienza utente moderna in modalità scura.
-*   **Gestione Dati**: Utilizzo di SQLite con integrità referenziale e query parametrizzate.
-*   **Visualizzazione**: Grafici dinamici integrati tramite Matplotlib per il tracciamento delle performance.
-*   **Esportazione**: Generazione di documenti PDF A4 con layout a due colonne (Fronte/Retro) tramite ReportLab e immagini PNG tramite Pillow.
+## System Requirements
 
-## Requisiti di Sistema
+The software requires Python 3.x and the appropriate system-level graphics libraries for Tkinter.
 
-Il software richiede Python 3.x e le librerie grafiche di sistema per Tkinter.
-
-### Dipendenze
-Le librerie Python necessarie sono elencate nel file requirements.txt e includono:
+### Python Dependencies
+Required libraries are listed in `requirements.txt` and include:
 *   customtkinter
 *   reportlab
 *   pillow
 *   matplotlib
 
-## Installazione e Avvio
+## Installation Guide
 
-1. Installare le dipendenze di sistema (esempio per Fedora):
+### Linux (Fedora)
+1. Install system dependencies:
    ```bash
    sudo dnf install python3-tkinter python3-pillow-tk python3-matplotlib-tk
    ```
-
-2. Installare i pacchetti Python necessari:
+2. Install Python packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Eseguire l'applicazione:
+### Linux (Ubuntu/Debian)
+1. Install system dependencies:
    ```bash
-   python3 flashcard_app/main.py
+   sudo apt update
+   sudo apt install python3-tk
+   ```
+2. Install Python packages:
+   ```bash
+   pip install -r requirements.txt
    ```
 
-## Struttura del Progetto
+### macOS
+1. Install Python (if not present) using Homebrew:
+   ```bash
+   brew install python tcl-tk
+   ```
+2. Install Python packages:
+   ```bash
+   pip3 install -r requirements.txt
+   ```
 
-*   `flashcard_app/main.py`: Punto di ingresso dell'applicazione.
-*   `flashcard_app/database.py`: Gestore della persistenza dei dati.
-*   `flashcard_app/ui/`: Componenti dell'interfaccia grafica.
-*   `flashcard_app/export/`: Moduli per la generazione di PDF e immagini.
-*   `flashcard_app/assets/`: Risorse grafiche e configurazioni del tema.
+### Windows
+1. Download and install Python from [python.org](https://www.python.org/downloads/). Ensure the "Add Python to PATH" and "tcl/tk and IDLE" options are checked during installation.
+2. Open PowerShell or Command Prompt and install packages:
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
-## Licenza
+## Execution
 
-Questo progetto è distribuito sotto Licenza MIT. Consultare il file LICENSE per ulteriori dettagli.
+To start the application, navigate to the project root directory and run:
+
+```bash
+python3 flashcard_app/main.py
+```
+
+## Project Structure
+
+*   `flashcard_app/main.py`: Application entry point and main window.
+*   `flashcard_app/database.py`: Data persistence layer and SQLite management.
+*   `flashcard_app/ui/`: Graphical user interface components.
+*   `flashcard_app/export/`: Modules for PDF and image generation.
+*   `flashcard_app/assets/`: Graphics resources and theme configurations.
+
+## License
+
+This project is distributed under the MIT License. Refer to the `LICENSE` file for further details.
