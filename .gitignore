@@ -1,0 +1,31 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+flashcard_app/flashcards.db
+
+# Virtual environments
+venv/
+.venv/
+env/
+bin/
+lib/
+include/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# App exports
+*.pdf
+*.png
+flashcard_app/export/*.pdf
+flashcard_app/export/*.png
